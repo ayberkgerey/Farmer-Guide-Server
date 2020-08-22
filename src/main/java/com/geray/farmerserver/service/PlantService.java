@@ -31,4 +31,8 @@ public class PlantService {
     public Plant getPlantById(String id) {
        return plantDao.getPlantById(id);
     }
+
+    public void updatePlant(String id, Plant plant) {
+        plantDao.updatePlantById(id,plant);
+    }
 }

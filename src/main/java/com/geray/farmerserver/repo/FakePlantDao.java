@@ -38,7 +38,7 @@ public class FakePlantDao implements PlantDao {
 
     @Override
     public void updatePlantById(String id, Plant update) {
-
+        DB.set(DB.indexOf(getPlantById(id)),update);
     }
 
 

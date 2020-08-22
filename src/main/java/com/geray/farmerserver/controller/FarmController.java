@@ -22,9 +22,7 @@ public class FarmController {
     }
 
     @GetMapping("{id}")
-    public Plant getPlantById(@PathVariable String id){
-        return plantService.getPlantById(id);
-    }
+    public Plant getPlantById(@PathVariable String id){ return plantService.getPlantById(id); }
 
     @PostMapping
     public void addPlant(@RequestBody Plant plant){
@@ -35,5 +33,9 @@ public class FarmController {
     public void deletePlantById(@PathVariable String id){
         plantService.deletePlantById(id);
     }
+
+    @PutMapping("{id}")
+    public void updatePlant(@PathVariable String id, @RequestBody Plant plant){ plantService.updatePlant(id,plant); }
+
 
 }
