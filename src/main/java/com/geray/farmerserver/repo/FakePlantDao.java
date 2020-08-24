@@ -13,7 +13,7 @@ public class FakePlantDao implements PlantDao {
     private static List<Plant> DB = new ArrayList<>();
 
     static{
-        DB.add(new Plant("0","domates","sebze","kış","tohum","www.asdas"));
+        DB.add(new Plant("0","domates","sebze","kış","tohum","www.asdas","makarinabla bla"));
     }
 
     @Override

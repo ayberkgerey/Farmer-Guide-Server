@@ -16,17 +16,21 @@ public class Plant {
     private String plantType;
     @NotBlank
     private String imageSrc;
+    @NotBlank
+    private String description;
+
 
     public Plant() {
     }
 
-    public Plant(String id, String name, String type, String season, String plantType,String imageSrc) {
+    public Plant(@NotBlank String id, @NotBlank String name, @NotBlank String type, @NotBlank String season, @NotBlank String plantType, @NotBlank String imageSrc, @NotBlank String description) {
         this.id = id;
         this.name = name;
         this.type = type;
         this.season = season;
         this.plantType = plantType;
         this.imageSrc = imageSrc;
+        this.description = description;
     }
 
     public String getId() {
@@ -77,5 +81,8 @@ public class Plant {
         this.imageSrc = imageSrc;
     }
 
+    public String getDescription() { return description; }
+
+    public void setDescription(String description) { this.description = description; }
 
 }
