@@ -12,7 +12,7 @@ public class PlantService {
 
     private final PlantDao plantDao;
 
-    public PlantService(@Qualifier("fakeDao") PlantDao plantDao) {
+    public PlantService(@Qualifier("postgres") PlantDao plantDao) {
         this.plantDao = plantDao;
     }
 

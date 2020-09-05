@@ -1,0 +1,9 @@
+CREATE TABLE fruits(
+    id VARCHAR(4) NOT NULL PRIMARY KEY,
+    name VARCHAR(20) NOT NULL,
+    type VARCHAR(20) NOT NULL,
+    season VARCHAR(20) NOT NULL,
+    plantType VARCHAR(20) NOT NULL,
+    imageSrc VARCHAR(200) NOT NULL,
+    description VARCHAR(400) NOT NULL
+)
