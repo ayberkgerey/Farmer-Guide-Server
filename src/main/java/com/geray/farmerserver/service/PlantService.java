@@ -1,3 +1,4 @@
+
 package com.geray.farmerserver.service;
 
 import com.geray.farmerserver.model.Plant;
@@ -6,6 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.Optional;
 
 @Service
 public class PlantService {
@@ -17,7 +19,7 @@ public class PlantService {
     }
 
     public Collection<Plant> getAllPlants() {
-      return plantDao.selectAllPlant();
+        return plantDao.selectAllPlant();
     }
 
     public void addPlant(Plant plant) {
@@ -28,8 +30,8 @@ public class PlantService {
         plantDao.deletePlantById(id);
     }
 
-    public Plant getPlantById(String id) {
-       return plantDao.getPlantById(id);
+    public Optional<Plant> getPlantById(String id) {
+        return plantDao.getPlantById(id);
     }
 
     public void updatePlant(String id, Plant plant) {

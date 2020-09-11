@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 
 @Repository("fakeDao")
@@ -27,8 +28,9 @@ public class FakePlantDao implements PlantDao {
     }
 
     @Override
-    public Plant getPlantById(String id) {
-        return DB.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+    public Optional<Plant> getPlantById(String id) {
+        //  return DB.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+        return null;
     }
 
     @Override
@@ -40,6 +42,5 @@ public class FakePlantDao implements PlantDao {
     public void updatePlantById(String id, Plant update) {
         DB.set(DB.indexOf(getPlantById(id)),update);
     }
-
 
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.Optional;
 
 @RequestMapping("/")
 @RestController
@@ -22,7 +23,7 @@ public class FarmController {
     }
 
     @GetMapping("{id}")
-    public Plant getPlantById(@PathVariable String id){ return plantService.getPlantById(id); }
+    public Optional<Plant> getPlantById(@PathVariable String id){ return plantService.getPlantById(id); }
 
     @PostMapping
     public void addPlant(@RequestBody Plant plant){

@@ -1,29 +1,18 @@
 package com.geray.farmerserver.model;
 
-import javax.validation.constraints.NotBlank;
-
 public class Plant {
-
-    @NotBlank
     private String id;
-    @NotBlank
     private String name;
-    @NotBlank
     private String type;
-    @NotBlank
     private String season;
-    @NotBlank
     private String plantType;
-    @NotBlank
     private String imageSrc;
-    @NotBlank
     private String description;
-
 
     public Plant() {
     }
 
-    public Plant(@NotBlank String id, @NotBlank String name, @NotBlank String type, @NotBlank String season, @NotBlank String plantType, @NotBlank String imageSrc, @NotBlank String description) {
+    public Plant(String id, String name, String type, String season, String plantType, String imageSrc, String description) {
         this.id = id;
         this.name = name;
         this.type = type;
@@ -81,8 +70,11 @@ public class Plant {
         this.imageSrc = imageSrc;
     }
 
-    public String getDescription() { return description; }
+    public String getDescription() {
+        return description;
+    }
 
-    public void setDescription(String description) { this.description = description; }
-
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
