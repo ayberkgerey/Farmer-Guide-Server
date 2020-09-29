@@ -1,8 +1,6 @@
+if: (type = push AND branch IN (master, dev)) OR (type = pull_request AND NOT branch =~ /no-ci/)
 language: java
 jdk:
   - openjdk11
   script: ./mvnw clean install
 
-  branches:
-    only:
-      - master
