@@ -19,9 +19,5 @@ class FarmerserverApplicationTests {
     @Autowired
     MockMvc mockMvc;
 
-    @Test
-    void getTest() throws Exception {
-        mockMvc.perform(get("/1")).andExpect(status().isOk());
-    }
 
 }
