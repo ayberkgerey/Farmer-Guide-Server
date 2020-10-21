@@ -1,0 +1,8 @@
+com\geray\farmerserver\repo\PlantDataAccessService.class
+com\geray\farmerserver\service\PlantService.class
+com\geray\farmerserver\controller\FarmController.class
+com\geray\farmerserver\repo\PlantDao.class
+com\geray\farmerserver\datasource\PostgresDataSource.class
+com\geray\farmerserver\model\Plant.class
+com\geray\farmerserver\FarmerserverApplication.class
+com\geray\farmerserver\repo\FakePlantDao.class
