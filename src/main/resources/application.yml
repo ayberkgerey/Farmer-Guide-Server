@@ -1,3 +1,4 @@
+app.name: farmerserver
 app:
   datasource:
     jdbc-url: jdbc:postgresql://localhost:5432/myfarmerdb
